@@ -1,4 +1,4 @@
-# CORE
+# Dashboard
 
 [![Slack](https://img.shields.io/badge/slack-community-brightgreen.svg)](https://nodemc.space/slack/)
 
