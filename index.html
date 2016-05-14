@@ -6,6 +6,7 @@
     <script src="https://fb.me/react-15.0.2.min.js"></script>
     <script src="https://fb.me/react-dom-15.0.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
     <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
 </head>
@@ -16,65 +17,7 @@
     <div id="content" class="s-content"></div>
 </div>
 
-    <script type="text/babel">
-    	// General Variables
-    	var online = "Yes", 
-    		ip = "127.0.0.1:25565";
-    	// ---
-
-    	// Header
-    	var HeaderContent = React.createClass({
-    		render: function(){
-    			return (
-    				<div>
-    				<h1>NodeMC v6 <small>Server IP: { ip } Online? { online }</small></h1>
-    				</div>
-    			);
-    		}
-    	});
-    	// ---
-
-    	// Index page components
-    	var IndexContents = React.createClass({
-    		render: function(){
-    			return (
-    				<div>
-    					<ConsoleBox />
-    					<CommandInput />
-    				</div>
-    			);
-    		}
-    	})
-    	var ConsoleBox = React.createClass({
-    		render: function(){
-    			return (
-    				<div>
-    					<h4>Console</h4>
-    					<textarea id="console" rows="32" className="e-log u-full-width" placeholder="Loading log..."></textarea>
-    				</div>
-    			);
-    		}
-    	});
-    	var CommandInput = React.createClass({
-    		render: function(){
-    			return (
-    				<div>
-    					<input type="text" id="command" className="u-full-width" placeholder="command"></input>
-    				</div>
-    			);
-    		}
-    	});
-    	// ---
-
-        ReactDOM.render(
-        	<HeaderContent />,
-        	document.getElementById('header')
-        );
-        ReactDOM.render(
-        	<IndexContents />,
-        	document.getElementById('content')
-        );
-    </script>
+    <script type="text/babel" src="js/index.js"></script>
 </body>
 
 </html>
