@@ -1,29 +1,33 @@
-# Dashboard
+# vue-dashboard
 
-[![Slack](https://img.shields.io/badge/slack-community-brightgreen.svg)](https://nodemc.space/slack/)
+> A Vue.js-powered frontend for NodeMC
 
-## About
+## Build Setup
 
-[Official Documentation](https://nodemc.space/docs)
+``` bash
+# install dependencies with Yarn (yarnpkg.com)
+yarn
 
-[Official Website](https://nodemc.space)
+# serve with hot reload at localhost:8080
+npm run dev
 
-[My Patreon](https://www.patreon.com/gmemstr?ty=h)
+# build for production with minification
+npm run build
 
-NodeMC Dashboard is the default dashboard that comes with NodeMC. It has been rewritten in React for v6.
+# build for production and view the bundle analyzer report
+npm run build --report
 
-## Requirements
+# run unit tests
+npm run unit
 
- - An internet connection
+# run e2e tests
+npm run e2e
 
-## Credits
+# run all tests
+npm test
 
-[Skeleton](http://getskeleton.com)
+# regenerate Element component styles in theme/ from element-variables.css
+npm run theme
+```
 
-[React](https://facebook.github.io/react/index.html)
-
-[Babel](https://babeljs.io/)
-
-## License
-
-GNU GPL3
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
