@@ -5,7 +5,7 @@
             <el-col :span="8" :offset="8">
                 <el-card header="Log in to NodeMC" v-loading="loggingIn" element-loading-text="Logging in...">
                     <el-input placeholder="Username" v-model="username" :disabled="loggingIn"></el-input>
-                    <el-input placeholder="Password" v-model="password" type="password" :disabled="loggingIn"></el-input>
+                    <el-input placeholder="Password" v-model="password" type="password" @keyup.enter.native="login" :disabled="loggingIn"></el-input>
                     <el-button type="primary" :disabled="loggingIn" :loading="loggingIn" @click="login">Log in</el-button>
                 </el-card>
             </el-col>
