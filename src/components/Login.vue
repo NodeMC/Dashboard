@@ -1,15 +1,43 @@
 <template>
     <div>
-        <img src="../assets/logo.png">
-        <el-row :gutter="20">
-            <el-col :span="8" :offset="8">
-                <el-card header="Log in to NodeMC" v-loading="loggingIn" element-loading-text="Logging in...">
-                    <el-input placeholder="Username" v-model="username" :disabled="loggingIn"></el-input>
-                    <el-input placeholder="Password" v-model="password" type="password" @keyup.enter.native="login" :disabled="loggingIn"></el-input>
-                    <el-button type="primary" :disabled="loggingIn" :loading="loggingIn" @click="login">Log in</el-button>
-                </el-card>
-            </el-col>
-        </el-row>
+        <div class="columns">
+            <div class="column is-half is-offset-3">
+                <div class="box">
+                    <h1 class="title">Log in to NodeMC</h1>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input"
+                                type="text"
+                                placeholder="Username"
+                                v-model="username"
+                                :disabled="loggingIn">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input"
+                                type="password"
+                                placeholder="Password"
+                                v-model="password"
+                                :disabled="loggingIn"
+                                @keyup.enter="login">
+                        </div>
+                    </div>
+                    <div class="field is-grouped is-align-bottom is-grouped-right">
+                        <div class="control">
+                            <button class="button is-primary"
+                                @click="login"
+                                :disabled="loggingIn">Log in</button>
+                        </div>
+                        <div class="control">
+                            <button class="button"
+                                v-if="anonymousCreateUser"
+                                @click="gotoCreateUser">Create user</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -34,6 +62,9 @@ export default {
         loggedIn() {
             return this.$store.state.auth.loggedIn;
         },
+        anonymousCreateUser() {
+            return true;
+        },
     },
     methods: {
         login() {
@@ -41,10 +72,19 @@ export default {
             this.$store.dispatch(actionTypes.LOGIN, { username, password });
         },
         showError(message) {
-            this.$message.error(message);
+            this.$toast.open({
+                message,
+                type: "is-danger",
+            });
         },
         showSuccess(message) {
-            this.$message.success(message);
+            this.$toast.open({
+                message,
+                type: "is-success",
+            });
+        },
+        gotoCreateUser() {
+            console.log("create user goes here"); // eslint-disable-line
         },
     },
     watch: {
