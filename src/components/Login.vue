@@ -75,12 +75,14 @@ export default {
             this.$toast.open({
                 message,
                 type: "is-danger",
+                position: "is-bottom",
             });
         },
         showSuccess(message) {
             this.$toast.open({
                 message,
                 type: "is-success",
+                position: "is-bottom",
             });
         },
         gotoCreateUser() {
