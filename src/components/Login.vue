@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="columns">
-            <div class="column is-half is-offset-3">
+        <div class="columns is-centered">
+            <div class="column is-half">
                 <div class="box">
                     <h1 class="title">Log in to NodeMC</h1>
                     <div class="field">
@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style scoped>
-.el-card__body > * {
-    margin: 4px 0;
+.box {
+    margin-top: 4px;
 }
 </style>
