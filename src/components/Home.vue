@@ -1,8 +1,11 @@
 <template>
     <div class="home">
         <section class="hero is-primary">
-            <div class="hero-body">
-                <h1 class="title">Welcome to NodeMC</h1>
+            <div class="hero-body has-text-centered">
+                <div class="container">
+                    <img src="../assets/logo.png">
+                    <h1 class="title">Welcome to NodeMC</h1>
+                </div>
             </div>
         </section>
         <footer class="footer">
@@ -29,3 +32,11 @@ export default {
     name: "home",
 };
 </script>
+
+<style lang="scss" scoped>
+.hero-body .container img {
+    width: 256px;
+    height: 256px;
+}
+</style>
+
