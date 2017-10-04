@@ -2,7 +2,7 @@
     <nav class="navbar is-primary" role="navigation">
         <div class="navbar-brand">
             <router-link class="navbar-item is-size-4" to="/">NodeMC</router-link>
-            <button class="button navbar-burger"
+            <button class="button navbar-burger is-primary is-radiusless"
                 :class="{ 'is-active': hamburgerActive }"
                 @click="toggleHamburger">
                 <span></span>
