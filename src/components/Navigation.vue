@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" role="navigation">
+    <nav class="navbar is-primary" role="navigation">
         <div class="navbar-brand">
             <router-link class="navbar-item is-size-4" to="/">NodeMC</router-link>
             <button class="button navbar-burger"
