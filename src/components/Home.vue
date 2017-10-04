@@ -11,10 +11,11 @@
         <footer class="footer">
             <div class="columns">
                 <div class="column is-quarter is-offset-one-quarter">
-                    <strong>NodeMC</strong> by the <a href="https://github.com/NodeMC">NodeMC Team</a>.
+                    <h2 class="is-size-4-desktop is-size-5">About</h2>
+                    <strong>NodeMC Dashboard</strong> by the <a href="https://github.com/NodeMC">NodeMC Team</a>.
                 </div>
                 <div class="column is-quarter">
-                    <h2>Built with</h2>
+                    <h2 class="is-size-4-desktop is-size-5">Built with</h2>
                     <ul>
                         <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
                         <li><a href="http://vuex.vuejs.org/" target="_blank">Vuex</a></li>
