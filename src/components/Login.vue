@@ -2,7 +2,7 @@
     <div>
         <div class="columns is-centered">
             <div class="column is-half">
-                <div class="box">
+                <div class="section">
                     <h1 class="title">Log in to NodeMC</h1>
                     <div class="field">
                         <div class="control">
@@ -100,9 +100,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-.box {
-    margin-top: 4px;
-}
-</style>
