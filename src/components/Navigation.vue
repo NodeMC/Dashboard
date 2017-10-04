@@ -48,3 +48,9 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+button.navbar-burger {
+    border: none;
+}
+</style>
+
