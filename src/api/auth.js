@@ -1,8 +1,10 @@
-import axios from "axios";
+import http from "./http";
+
+const instance = http();
 
 export default {
     async getToken(username, password) {
-        const { data } = await axios.post("http://localhost:8081/v2/auth/token", {
+        const { data } = await instance.post("/v2/auth/token", {
             username,
             password,
         });
