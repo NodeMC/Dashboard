@@ -19,7 +19,8 @@ const actions = {
         let token;
         try {
             token = await api.getToken(username, password);
-            localStorage.setItem("token", token);
+            localStorage.setItem("id", username);
+            localStorage.setItem("key", token);
             commit(mutationTypes.LOGIN_SUCCESS);
         } catch (e) {
             commit(mutationTypes.LOGIN_ERROR, e.message);
