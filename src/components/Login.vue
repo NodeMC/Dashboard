@@ -4,6 +4,7 @@
             <div class="column is-half">
                 <div class="section">
                     <h1 class="title">Log in to NodeMC</h1>
+                    <b-notification v-if="errorMsg" type="is-danger" has-icon>{{errorMsg}}</b-notification>
                     <div class="field">
                         <div class="control">
                             <input class="input"
@@ -71,13 +72,6 @@ export default {
             const { username, password } = this;
             this.$store.dispatch(actionTypes.LOGIN, { username, password });
         },
-        showError(message) {
-            this.$toast.open({
-                message,
-                type: "is-danger",
-                position: "is-bottom",
-            });
-        },
         showSuccess(message) {
             this.$toast.open({
                 message,
@@ -90,9 +84,6 @@ export default {
         },
     },
     watch: {
-        errorMsg(msg) {
-            if (msg) this.showError(msg);
-        },
         loggedIn(success) {
             if (success) {
                 this.showSuccess("Login successful");
