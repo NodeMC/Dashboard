@@ -39,6 +39,7 @@
                 </div>
             </div>
         </div>
+        <b-loading :active="loggingIn"></b-loading>
     </div>
 </template>
 
