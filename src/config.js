@@ -1,5 +1,5 @@
 // HTTP
-export const baseURL = "https://localhost:8081"; // Change to reflect the address and port of CORE
+export const baseURL = "http://localhost:8081"; // Change to reflect the address and port of CORE
 
 // Authentication
 export const hawkAlgo = "sha256";
