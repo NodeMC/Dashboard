@@ -19,5 +19,10 @@ export default new Router({
             name: "Login",
             component: Login,
         },
+        {
+            path: "/debug",
+            name: "Debug",
+            component: Debug,
+        },
     ],
 });
