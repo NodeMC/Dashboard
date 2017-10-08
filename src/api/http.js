@@ -29,7 +29,9 @@ function interceptResponse(response) {
         });
     if (!isValid) {
         throw new Error("Server authentication failed.");
-    } else if (response.data.errors && response.data.errors.length > 0) {
+    } else if (!response.config.ignoreAPIErrors
+        && response.data.errors
+        && response.data.errors.length > 0) {
         throw new Error(JSON.stringify(response.data.errors));
     }
     return response;
