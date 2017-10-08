@@ -30,7 +30,7 @@ function interceptResponse(response) {
     if (!isValid) {
         throw new Error("Server authentication failed.");
     } else if (response.data.errors && response.data.errors.length > 0) {
-        throw new Error(response.data.errors[0]);
+        throw new Error(JSON.stringify(response.data.errors));
     }
     return response;
 }
