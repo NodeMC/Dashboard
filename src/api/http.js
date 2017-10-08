@@ -46,3 +46,17 @@ export default function newInstance() {
     instance.interceptors.response.use(interceptResponse);
     return instance;
 }
+
+export function parseError(error) {
+    let errors;
+    let msg = "";
+    try {
+        errors = JSON.parse(error.message);
+    } catch (e) {
+        errors = [{ ...error }];
+    }
+    errors.forEach((e) => {
+        msg = msg + (msg ? ", " : "") + e.message + (e.code ? ` (${e.code})` : "");
+    });
+    return msg;
+}
