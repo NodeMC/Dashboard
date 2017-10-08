@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import hawk from "hawk";
-import { hawkAlgo, baseURL } from "../config";
+import { hawkAlgo, baseURL } from "@/config";
 
 const credentials = {
     algo: hawkAlgo,
