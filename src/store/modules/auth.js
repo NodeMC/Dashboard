@@ -1,4 +1,5 @@
 import api from "../../api/auth";
+import { parseError } from "../../api/http";
 import * as actionTypes from "../actionTypes";
 import * as getterNames from "../getterNames";
 import * as mutationTypes from "../mutationTypes";
@@ -23,7 +24,7 @@ const actions = {
             localStorage.setItem("key", token);
             commit(mutationTypes.LOGIN_SUCCESS);
         } catch (e) {
-            commit(mutationTypes.LOGIN_ERROR, e.message);
+            commit(mutationTypes.LOGIN_ERROR, parseError(e));
         } finally {
             commit(mutationTypes.LOGIN_FINISH);
         }
