@@ -1,8 +1,8 @@
-import api from "../../api/auth";
-import { parseError } from "../../api/http";
-import * as actionTypes from "../actionTypes";
-import * as getterNames from "../getterNames";
-import * as mutationTypes from "../mutationTypes";
+import api from "@/api/auth";
+import { parseError } from "@/api/http";
+import * as actionTypes from "@/store/actionTypes";
+import * as getterNames from "@/store/getterNames";
+import * as mutationTypes from "@/store/mutationTypes";
 
 const state = {
     loginPending: false,
