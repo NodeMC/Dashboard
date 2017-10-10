@@ -2,9 +2,9 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Home from "@/components/Home";
-import Login from "@/components/Login";
-import CreateUser from "@/components/CreateUser";
-import Debug from "@/components/Debug";
+import Login from "@/components/AuthLoginPage";
+import CreateUser from "@/components/UserCreatePage";
+import Debug from "@/components/DebugPage";
 
 Vue.use(Router);
 
