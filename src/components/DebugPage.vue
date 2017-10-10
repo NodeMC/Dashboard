@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import DebugHttp from "./debug/DebugHttp";
-import DebugStore from "./debug/DebugVuexStore";
+import HttpTab from "./DebugHttpTab";
+import StoreTab from "./DebugVuexStoreTab";
 
 export default {
     data() {
@@ -30,8 +30,8 @@ export default {
         };
     },
     components: {
-        DebugHttp,
-        DebugStore,
+        HttpTab,
+        StoreTab,
     },
 };
 </script>
