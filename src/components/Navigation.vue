@@ -22,6 +22,12 @@
                     <b-icon icon="person"></b-icon>
                     <span>Log in</span>
                 </router-link>
+                <router-link class="navbar-item"
+                    to="/user"
+                    v-if="loggedIn">
+                    <b-icon icon="person"></b-icon>
+                    <span>Welcome, {{username}}</span>
+                </router-link>
             </div>
         </div>
     </nav>
@@ -38,6 +44,9 @@ export default {
     computed: {
         loggedIn() {
             return this.$store.state.auth.loggedIn;
+        },
+        username() {
+            return this.$store.state.user.username;
         },
     },
     methods: {
