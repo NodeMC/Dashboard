@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 
+import NotFound from "@/components/NotFoundPage";
+
 import Home from "@/components/Home";
 import Login from "@/components/AuthLoginPage";
 import CreateUser from "@/components/UserCreatePage";
@@ -10,6 +12,11 @@ Vue.use(Router);
 
 export default new Router({
     routes: [
+        {
+            path: "*",
+            name: "Not found",
+            component: NotFound,
+        },
         {
             path: "/",
             name: "Home",
