@@ -23,6 +23,7 @@ const actions = {
             localStorage.setItem("id", username);
             localStorage.setItem("key", token);
             commit(mutationTypes.LOGIN_SUCCESS);
+            commit(mutationTypes.USER_SET_USERNAME, username);
         } catch (e) {
             commit(mutationTypes.LOGIN_ERROR, parseError(e));
         } finally {
