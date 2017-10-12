@@ -38,7 +38,7 @@
 <script>
 import { minUsernameLength, minPasswordLength } from "@/config";
 import api from "@/api/user";
-import CentredForm from "./LayoutCentredForm";
+import CentredForm from "./LayoutCentred";
 
 export default {
     components: {

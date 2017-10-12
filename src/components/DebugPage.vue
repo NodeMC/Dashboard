@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import HttpTab from "./DebugHttpTab";
-import StoreTab from "./DebugVuexStoreTab";
+import HttpTab from "./DebugTabHttp";
+import StoreTab from "./DebugTabVuexStore";
 
 export default {
     data() {
