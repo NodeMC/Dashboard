@@ -82,7 +82,8 @@ export default {
             return this.password.length >= minPasswordLength;
         },
         passwordMatches() {
-            return this.password === this.confirmPassword;
+            return this.password === this.confirmPassword
+                && this.passwordValid;
         },
         canSubmit() {
             return this.usernameValid
