@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <navigation></navigation>
-        <router-view></router-view>
+        <transition name="router" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 
@@ -40,6 +42,23 @@ $colors: (
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+// Router transition
+.router-enter-active, .router-leave-active {
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.router-enter {
+    opacity: 0;
+    transform: translate(0, -30px);
+}
+.router-leave-to {
+    opacity: 0;
+    transform: scale(1.1);
+}
+.router-leave, .router-enter-to {
+    opacity: 1;
+    transform: none;
+}
 
 // Import Bulma and Buefy styles
 @import "~bulma";
