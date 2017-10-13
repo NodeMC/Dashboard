@@ -21,8 +21,8 @@
                 v-model="password"></b-input>
             </b-field>
             <b-field label="Confirm password"
-                :type="passwordMatches ? 'is-success' : 'is-danger'"
-                :message="passwordMatches ? null : `Passwords must match.`">
+                :type="confirmPasswordType"
+                :message="!passwordMatches && passwordValid && confirmPassword ? `Passwords must match.` : null">
                     <b-input type="password"
                     placeholder="Password"
                     v-model="confirmPassword"></b-input>
@@ -82,10 +82,10 @@ export default {
     },
     computed: {
         usernameValid() {
-            return this.username.length >= minUsernameLength;
+            return this.username && this.username.length >= minUsernameLength;
         },
         passwordValid() {
-            return this.password.length >= minPasswordLength;
+            return this.password && this.password.length >= minPasswordLength;
         },
         passwordMatches() {
             return this.password === this.confirmPassword
@@ -95,6 +95,11 @@ export default {
             return this.usernameValid
                 && this.passwordValid
                 && this.passwordMatches;
+        },
+        confirmPasswordType() {
+            if (this.passwordMatches) return "is-success";
+            if (this.passwordValid) return "is-danger";
+            return null;
         },
     },
 };
