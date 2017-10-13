@@ -44,7 +44,8 @@
 </template>
 
 <script>
-import * as actionTypes from "../store/actionTypes";
+import { anonymousCreateUser } from "@/config";
+import * as actionTypes from "@/store/actionTypes";
 
 export default {
     name: "login",
@@ -52,6 +53,7 @@ export default {
         return {
             username: "",
             password: "",
+            anonymousCreateUser,
         };
     },
     computed: {
@@ -63,9 +65,6 @@ export default {
         },
         loggedIn() {
             return this.$store.state.auth.loggedIn;
-        },
-        anonymousCreateUser() {
-            return true;
         },
     },
     methods: {
