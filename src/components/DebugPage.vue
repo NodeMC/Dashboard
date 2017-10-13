@@ -10,10 +10,10 @@
         <b-tabs v-model="activeTab"
             class="section" expanded>
             <b-tab-item label="HTTP">
-                <debug-http></debug-http>
+                <http-tab></http-tab>
             </b-tab-item>
             <b-tab-item label="Vuex Store">
-                <debug-store></debug-store>
+                <store-tab></store-tab>
             </b-tab-item>
         </b-tabs>
     </div>
