@@ -26,14 +26,14 @@
                     </div>
                     <div class="field is-grouped is-align-bottom is-grouped-right">
                         <div class="control">
+                            <router-link class="button"
+                                v-if="anonymousCreateUser"
+                                to="/createuser">Create user</router-link>
+                        </div>
+                        <div class="control">
                             <button class="button is-primary"
                                 @click="login"
                                 :disabled="loggingIn">Log in</button>
-                        </div>
-                        <div class="control">
-                            <button class="button"
-                                v-if="anonymousCreateUser"
-                                @click="gotoCreateUser">Create user</button>
                         </div>
                     </div>
                 </div>
