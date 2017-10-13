@@ -27,9 +27,15 @@
                     placeholder="Password"
                     v-model="confirmPassword"></b-input>
             </b-field>
-            <div class="control">
-                <button class="button is-primary" @click="submit"
-                    :disabled="!canSubmit">Submit</button>
+            <div class="field is-grouped is-grouped-right">
+                <div class="control">
+                    <router-link class="button"
+                        to="/login">Log in</router-link>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" @click="submit"
+                        :disabled="!canSubmit">Submit</button>
+                </div>
             </div>
         </form>
     </centred-form>
