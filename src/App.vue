@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Inconsolata|Lato");
 @import "~bulma/sass/utilities/_all";
 
 $primary: #2FB502;
@@ -42,6 +42,12 @@ $colors: (
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+// Fonts
+$family-sans-serif: Lato, sans-serif;
+$family-monospace: InconsolataGo, Inconsolata, monospace;
+
+$family-primary: $family-sans-serif;
 
 // Router transition
 .router-enter-active, .router-leave-active {
