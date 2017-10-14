@@ -45,8 +45,8 @@ export default {
                 this.rejection = e.message;
                 response = e.response;
             }
-            this.responseCode = response.status;
-            this.responseBody = response.data;
+            this.responseCode = response ? response.status : "";
+            this.responseBody = response ? response.data : "";
         },
     },
 };
