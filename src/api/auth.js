@@ -7,6 +7,8 @@ export default {
         const { data } = await instance.post("/v2/auth/token", {
             username,
             password,
+        }, {
+            noHawk: true,
         });
         return data.data.token;
     },
