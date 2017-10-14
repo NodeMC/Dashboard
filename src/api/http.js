@@ -5,7 +5,7 @@ import hawk from "hawk";
 import { hawkAlgo, baseURL } from "@/config";
 
 const credentials = {
-    algo: hawkAlgo,
+    algorithm: hawkAlgo,
     get id() {
         return localStorage.getItem("id");
     },
@@ -15,9 +15,9 @@ const credentials = {
 };
 
 function interceptRequest(config) {
-    const hawkHeader = hawk.client.header(config.baseURL + config.url,
-        config.method, { credentials, payload: config.data });
     if (!config.noHawk) {
+        const hawkHeader = hawk.client.header(config.url, config.method,
+            { credentials: { ...credentials }, payload: config.data });
         config.headers.Authorization = hawkHeader.field;
         config.hawk = hawkHeader;
     }
