@@ -17,16 +17,18 @@ const credentials = {
 function interceptRequest(config) {
     const hawkHeader = hawk.client.header(config.baseURL + config.url,
         config.method, { credentials, payload: config.data });
-    config.headers.Authorization = hawkHeader.field;
-    config.hawk = hawkHeader;
+    if (!config.noHawk) {
+        config.headers.Authorization = hawkHeader.field;
+        config.hawk = hawkHeader;
+    }
     return config;
 }
 
 function interceptResponse(response) {
-    const isValid = hawk.client.authenticate(response, credentials,
+    const isValid = response.config.hawk ? hawk.client.authenticate(response.request, credentials,
         response.config.hawk.artifacts, {
             payload: response.data,
-        });
+        }) : true;
     if (!isValid) {
         throw new Error("Server authentication failed.");
     } else if (!response.config.ignoreAPIErrors
