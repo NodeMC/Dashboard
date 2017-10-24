@@ -4,7 +4,10 @@
         <b-field>
             <b-select v-model="method" placeholder="Method">
                 <option>GET</option>
+                <option>PUT</option>
                 <option>POST</option>
+                <option>PATCH</option>
+                <option>DELETE</option>
             </b-select>
             <b-input v-model="url" placeholder="URL" expanded></b-input>
             <p class="control"><button class="button is-primary" @click="request">Go</button></p>
