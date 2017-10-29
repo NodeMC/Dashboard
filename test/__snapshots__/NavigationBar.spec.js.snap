@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar.vue when logged in matches snapshot 1`] = `
+<nav role="navigation" class="navbar is-primary">
+    <div class="navbar-brand">
+        <router-link to="/" class="navbar-item is-size-4">NodeMC</router-link> <button class="button navbar-burger is-primary is-radiusless"><span></span> <span></span> <span></span></button></div>
+    <div class="navbar-menu">
+        <div class="navbar-start"></div>
+        <div class="navbar-end">
+            <div to="/user" class="navbar-item has-dropdown is-hoverable"><a class="navbar-link"><b-icon icon="person"></b-icon> <span>Welcome, Username</span></a>
+                <div class="navbar-dropdown"><a class="navbar-item"><b-icon icon="exit_to_app"></b-icon> <span>Log out</span></a></div>
+            </div>
+        </div>
+    </div>
+</nav>
+`;
