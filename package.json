@@ -15,9 +15,10 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "babel-plugin-module-resolver": "^2.7.1",
     "buefy": "^0.5.3",
     "hawk": "^6.0.2",
-    "vue": "^2.2.2",
+    "vue": "2.5.2",
     "vue-router": "^2.3.0",
     "vuex": "^2.3.0"
   },
@@ -69,9 +70,9 @@
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.0",
     "vue-loader": "^11.1.4",
-    "vue-server-renderer": "^2.5.2",
+    "vue-server-renderer": "2.5.2",
     "vue-style-loader": "^2.0.0",
-    "vue-template-compiler": "^2.2.4",
+    "vue-template-compiler": "2.5.2",
     "vue-test-utils": "^1.0.0-beta.3",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.2.1",
@@ -92,5 +93,23 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "mapCoverage": true
   }
 }
