@@ -83,7 +83,6 @@ export default {
             } catch (e) {
                 this.rejection = e.message;
                 response = e.response;
-                console.error(e);
             }
             this.responseCode = response ? response.status : "";
             this.responseBody = response ? response.data : "";
