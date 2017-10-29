@@ -16,8 +16,12 @@ const credentials = {
 
 function interceptRequest(config) {
     if (!config.noHawk) {
-        const hawkHeader = hawk.client.header(config.url, config.method,
-            { credentials: { ...credentials }, payload: config.data });
+        const hawkHeader = hawk.client.header(
+            config.url,
+            config.method,
+            {
+                credentials: { ...credentials },
+            });
         config.headers.Authorization = hawkHeader.field;
         config.hawk = hawkHeader;
     }
