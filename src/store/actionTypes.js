@@ -1,1 +1,2 @@
-export const LOGIN = "LOGIN"; // eslint-disable-line
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";

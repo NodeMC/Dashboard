@@ -30,6 +30,12 @@ const actions = {
             commit(mutationTypes.LOGIN_FINISH);
         }
     },
+    [actionTypes.LOGOUT]({ commit }) {
+        localStorage.setItem("id", null);
+        localStorage.setItem("key", null);
+        commit(mutationTypes.LOGOUT_SUCCESS);
+        commit(mutationTypes.USER_SET_USERNAME, null);
+    },
 };
 
 const mutations = {
@@ -48,6 +54,9 @@ const mutations = {
     },
     [mutationTypes.LOGIN_FINISH]: (state) => {
         state.loginPending = false;
+    },
+    [mutationTypes.LOGOUT_SUCCESS]: (state) => {
+        state.loggedIn = false;
     },
 };
 

@@ -3,4 +3,6 @@ export const LOGIN_ERROR = "LOGIN_ERROR";
 export const LOGIN_START = "LOGIN_START";
 export const LOGIN_FINISH = "LOGIN_FINISH";
 
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+
 export const USER_SET_USERNAME = "USER_SET_USERNAME";
