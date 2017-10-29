@@ -107,6 +107,8 @@ pre code {
 }
 
 .card {
+    width: calc(100% - 6px);
+    transform: translateX(3px);
     height: calc(100% - 3px);
 }
 </style>
