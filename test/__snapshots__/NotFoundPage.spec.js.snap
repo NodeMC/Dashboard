@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage.vue matches snapshot 1`] = `
+<div class="section has-text-centered">
+    <p class="is-size-2">There's nothing here.</p>
+    <router-link to="/" class="is-size-4">Return to homepage</router-link>
+</div>
+`;
