@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutCentred.vue matches snapshot 1`] = `
+<div class="centred-form columns is-centered">
+    <div class="column is-half">
+        <div class="section">
+            <!---->
+        </div>
+    </div>
+</div>
+`;
