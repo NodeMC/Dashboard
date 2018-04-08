@@ -1,5 +1,7 @@
 # vue-dashboard
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NodeMC/Dashboard.svg)](https://greenkeeper.io/)
+
 > A Vue.js-powered frontend for NodeMC
 
 ## Build Setup
